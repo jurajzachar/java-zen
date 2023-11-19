@@ -1,4 +1,4 @@
-package com.blueskiron.ninetynine;
+package com.blueskiron.benchmarks;
 
 import org.openjdk.jmh.annotations.*;
 

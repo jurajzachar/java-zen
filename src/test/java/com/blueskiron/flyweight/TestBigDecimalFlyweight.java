@@ -2,6 +2,7 @@ package com.blueskiron.flyweight;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -12,6 +13,7 @@ import static com.blueskiron.flyweight.BigDecimalFlyweight.*;
 public class TestBigDecimalFlyweight {
 
   @Test
+  @DisabledIfEnvironmentVariable(named = "SKIP_LARGE_HEAP", matches = "True")
   void shouldInstantiateCacheWithDefaults() {
     var start = System.currentTimeMillis();
     var candidate = BigDecimalFlyweight.withDefaults().initiate();

@@ -14,6 +14,9 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  SKIP_LARGE_HEAP: True
+
 jobs:
   test:
 

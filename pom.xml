@@ -77,6 +77,11 @@
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.2</version>
+                <configuration>
+                    <environmentVariables>
+                        <SKIP_LARGE_HEAP>True</SKIP_LARGE_HEAP>
+                    </environmentVariables>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
